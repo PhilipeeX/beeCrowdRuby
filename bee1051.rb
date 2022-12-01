@@ -22,3 +22,17 @@
     o ponto. Se o valor de entrada for menor ou igual a 2000, deverá ser impressa a mensagem "Isento".
 =end
 
+salario = gets.chomp.to_f
+
+if salario <= 2000.00
+    puts "isento"
+elsif salario > 2000.00 && salario <= 3000.00
+    imposto = (salario - 1000) * 0.08
+    puts "#{imposto}"
+elsif salario > 3000.00 && salario <= 4500.00
+    imposto = (1000 * 0.08) + ((salario - 3000.00) * 0.18)
+    puts "#{imposto}"
+elsif salario > 4500.00
+    imposto (1000 * 0.08) + (1500.00 * 0.18) + ((salario - 4500.00) * 0.28)
+    puts "{#{imposto}}"
+end
