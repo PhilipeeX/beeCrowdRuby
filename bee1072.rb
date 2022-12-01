@@ -14,10 +14,21 @@
 =end
 
 quantidade = gets.chomp.to_i
-valores = []
+valores = Array.new()
 
 while valores.size < quantidade
     valores.push(gets.chomp.to_i)
 end
 
-puts "O array contém #{valores}"
+dentro = 0
+fora = 0
+for i in valores do
+    if i >= 10 && i <= 20
+        dentro += 1
+    else
+        fora += 1
+    end
+end
+
+puts "#{dentro} in"
+puts "#{fora} out"
