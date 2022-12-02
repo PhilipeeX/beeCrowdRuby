@@ -1,0 +1,4 @@
+=begin
+    Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida, mostrar na tela o maior número
+    do vetor (supor não haver empates). Mostrar também a posição do maior elemento.
+=end
