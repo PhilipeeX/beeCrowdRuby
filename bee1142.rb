@@ -21,8 +21,16 @@
                                                     21 22 23 PUM
                                                     25 26 27 PUM
 =end
+
+entrada = gets.chomp.to_i
 i = 0
-while i < 7 do
-    
+j = 1
+while i < entrada do
+    until j % 4 == 0 do
+        print "#{j} "
+        j += 1
+    end
+    puts "PUM"
     i += 1
+    j += 1
 end 
