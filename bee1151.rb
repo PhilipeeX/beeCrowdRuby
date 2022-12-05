@@ -18,15 +18,19 @@ entrada = gets.chomp.to_i
 i = 0
 a = 0
 b = 1
-y = 2
+c = a + b
 
+while i < entrada do 
+    if i == 0
+    print "#{a} "
+    print "#{b} "
+    print "#{c} "
+    end
+a = b + c
 print "#{a} "
+b = c + a
 print "#{b} "
-print "#{y} "
-x = 3
-while i < entrada
-    z = z + x
-    print "#{z} "
-    z = x + y
-    i += 1
+c = a + b
+print "#{c} "
+i += 1
 end
