@@ -17,6 +17,7 @@
 casos_de_teste = gets.chomp.to_i
 i = 0
 while i < casos_de_teste do
+    impar = 0
     valores = gets.chomp.split(' ')
     x = valores[0].to_i
     y = valores[1].to_i
@@ -27,14 +28,21 @@ while i < casos_de_teste do
         maior = y 
         menor = x 
     end
+    x = 0
     while menor < maior do
-        impar = 0
+        if menor + 1 == maior && x == 0
+            break
+        end
+        if x == 0 
+            menor += 1
+        end
         if menor % 2 != 0
             impar += menor
         end
         menor += 1
+        x = 1
     end
     puts "#{impar}"
 
     i += 1 
-end 
+end
