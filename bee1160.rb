@@ -34,5 +34,25 @@ casos_de_teste = gets.chomp.to_i
 i = 0
 
 while i < casos_de_teste do
-     
+    dados = gets.chomp.split(' ')
+    pA = dados[0].to_i
+    pB = dados[1].to_i
+    g1 = dados[2].to_f
+    g2 = dados[3].to_f
+
+     anos = 1
+     crescimento_em_A = pA * (g1/100)
+     crescimento_em_B = pB * (g2/100)
+     while pA < pB do
+        puts "crescimento na cidade A é de: #{crescimento_em_A} % ao ano"
+        pA = pA + crescimento_em_A
+        puts "pA recebeu #{pA + crescimento_em_A}"
+        puts "crescimento na cidade B é de: #{crescimento_em_B} % ao ano"
+        pB += crescimento_em_B
+        puts "pB recebeu #{pB + crescimento_em_B}"
+        anos += 1
+        puts "se passaram #{anos} anos"
+     end
+     puts "demorou #{anos} anos"
+     i += 1
 end
