@@ -1,13 +1,14 @@
 =begin
-    Fazer um programa para ler um vetor de N números reais. Em seguida, mostrar na tela a média aritmética de todos
-    elementos. Depois mostrar todos os elementos do vetor que estejam abaixo da média.
+    Fazer um programa para ler um conjunto de nomes de pessoas e suas respectivas idades. Depois, mostrar na tela o nome
+    da pessoa mais velha.
 
-        Exemplo:
-        Entrada                             Saída
-4
-10.0 15.5 13.2 9.8
-                                            12.125
-                                            10.0
-                                            9.8
+    Exemplo:
+        Entrada                                     Saída
+        5                                           Pessoa mais velha: Carlos
+        Joao 16
+        Maria 21
+        Teresa 15
+        Carlos 23
+        Paulo 17
 =end
 

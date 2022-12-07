@@ -1,31 +1,35 @@
 =begin
-    Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida, mostrar na tela o maior número
-    do vetor (supor não haver empates). Mostrar também a posição do maior elemento.
+        Faça um programa para ler dois vetores A e B, contendo N elementos cada. Em seguida, gere um terceiro vetor C onde
+        cada elemento de C é a soma dos elementos correspondentes de A e B. Imprima o vetor C gerado.
+
         Exemplo:
-    Entrada                         Saída
-    6
-    8.0 4.0 10.0 14.0 13.0 7.0
-                                    14.0
-                                    3
+        Entrada                         Saída
+        6
+        8 2 11 14 13 20
+        5 10 3 1 10 7
+                                        13 12 14 15 23 27
 =end
 
-vetor = Array.new(gets.chomp.to_i)
-vetor = gets.split(' ')
+quantidade_elementos = gets.chomp.to_i
+vetorA, vetorB = Array.new(quantidade_elementos), Array.new(quantidade_elementos)
+
+vetor_temp = gets.chomp.split(' ')
 i = 0
-vetor2 = []
-while i < vetor.size do
-    vetor2.push(vetor[i].to_f)
+while i < vetor_temp.size do
+    vetorA[i] = vetor_temp[i].to_i
     i += 1
 end
+vetor_temp = gets.chomp.split(' ')
 i = 0
-maior = 0
-indice_do_maior = 0
-vetor2.each_with_index do |valor, indice|
-    if valor > maior
-        puts "funcionou"
-        maior = valor
-        indice_do_maior = indice
-    end
+while i < vetor_temp.size do
+    vetorB[i] = vetor_temp[i].to_i
+    i += 1
 end
-puts maior
-puts indice_do_maior
+vetorC = Array.new(quantidade_elementos)
+i = 0
+while i < vetorC.size do
+    vetorC[i] = vetorA[i] + vetorB[i]
+    i += 1
+end
+
+p vetorC
