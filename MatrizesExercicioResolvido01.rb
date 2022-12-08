@@ -15,12 +15,12 @@
 =end
 
 matriz = gets.chomp.to_i
-matrizA = [[],[],[]]
+matrizA = Array.new(matriz) { Array.new(matriz) }
 for linha in (0...matriz)
    valores = gets.chomp.split(' ')
-   matrizA[linha][0] = valores[0].to_i
-   matrizA[linha][1] = valores[1].to_i
-   matrizA[linha][2] = valores[2].to_i
+   for coluna in (0...matriz)
+        matrizA[linha][coluna] = valores[coluna].to_i
+   end
 end
 puts "DIAGONAL PRINCIPAL: "
 i = 0
