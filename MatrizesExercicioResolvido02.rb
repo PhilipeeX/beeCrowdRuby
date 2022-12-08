@@ -12,3 +12,24 @@
                                                     25
                                                     10
 =end
+
+valores_MN = gets.chomp.split(' ')
+
+m = valores_MN[0].to_i
+n = valores_MN[1].to_i
+matrizA = Array.new(m) { Array.new(n) }
+
+for i in (0...m)
+    valores = gets.chomp.split(' ')
+    for j in (0...n)
+        matrizA[i][j] = valores[j].to_i
+    end
+end
+
+for i in (0...m)
+    soma = 0
+    for j in (0...n)
+        soma += matrizA[i][j].to_i
+    end
+    puts soma
+end
