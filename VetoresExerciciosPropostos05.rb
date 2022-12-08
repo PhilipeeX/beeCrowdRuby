@@ -10,6 +10,7 @@
 =end
 
 # tentar denovo usando array.count
+
 numeros_inteiros = Array.new(gets.chomp.to_i)
 
 numeros_inteiros = gets.chomp.split(' ')
