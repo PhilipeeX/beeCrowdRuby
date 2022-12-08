@@ -12,3 +12,24 @@
         Paulo 17
 =end
 
+pessoas = gets.chomp.to_i
+
+i = 0
+nomes = []
+idades = []
+while i < pessoas do 
+    dados = gets.chomp.split(' ')
+    nomes << dados[0]
+    idades << dados[1].to_i
+    i += 1
+end
+maior = 0
+oldest_index = 0
+idades.each_with_index do | element, index |
+   if element > maior
+       maior = element
+       oldest_index = index
+   end
+end
+
+puts "Pessoa mais velha: #{nomes[oldest_index]}"

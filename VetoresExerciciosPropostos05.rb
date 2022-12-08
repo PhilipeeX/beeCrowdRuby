@@ -9,3 +9,18 @@
                                                     11.0
 =end
 
+# tentar denovo usando array.count
+numeros_inteiros = Array.new(gets.chomp.to_i)
+
+numeros_inteiros = gets.chomp.split(' ')
+numeros_inteiros.map! { |i| i = i.to_i}
+x = 0
+pares = 0
+numeros_inteiros.each do |i|
+    if i % 2 == 0
+        x += 1
+        pares += i 
+    end
+end
+media = pares / x 
+puts media.to_f

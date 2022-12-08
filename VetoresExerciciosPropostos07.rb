@@ -15,3 +15,28 @@
                                                 Maria
                                                 Teresa
 =end
+
+alunos = gets.chomp.to_i
+i = 0
+nomes = Array.new()
+nota1 = Array.new()
+nota2 = Array.new()
+
+while i < alunos do 
+   dados = gets.chomp.split(' ')
+   nomes << dados[0]
+   nota1 << dados[1].to_f
+   nota2 << dados[2].to_f
+   i += 1
+end
+
+puts "Alunos aprovados:"
+
+i = 0
+while i < nomes.size do 
+    media = (nota1[i] + nota2[i]) / 2
+    if media >= 6
+        puts nomes[i].capitalize
+    end
+    i += 1
+end
