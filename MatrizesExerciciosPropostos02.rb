@@ -1,5 +1,5 @@
 =begin
-         Ler um número N e depois uma matriz quadrada NxN com números inteiros. Depois, mostrar na tela a soma dos
+         Ler um número N e depois uma matriz quadrada N x N com números inteiros. Depois, mostrar na tela a soma dos
     elementos de cada linha da matriz.
     
     Entrada:
@@ -18,3 +18,22 @@
                                         19
                                         29
 =end
+
+matriz_quadrada = gets.chomp.to_i
+
+matriz = Array.new(matriz_quadrada) { Array.new(matriz_quadrada) }
+
+for i in (0...matriz_quadrada)
+    dados = gets.chomp.split(' ')
+    for j in (0...matriz_quadrada)
+        matriz[i][j] = dados[j].to_i
+    end
+end
+
+for i in (0...matriz_quadrada)
+    soma = 0
+    for j in (0...matriz_quadrada)
+        soma += matriz[i][j]
+    end
+    puts soma
+end

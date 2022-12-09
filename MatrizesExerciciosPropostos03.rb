@@ -21,3 +21,18 @@
                                     15
 =end
 
+matriz_quadrada = gets.chomp.to_i
+
+matriz = Array.new(matriz_quadrada) { Array.new(matriz_quadrada) }
+
+for i in (0...matriz_quadrada)
+    maior = 0
+    dados = gets.chomp.split(' ')
+    for j in (0...matriz_quadrada)
+        matriz[i][j] = dados[j].to_i
+        if matriz[i][j] > maior
+            maior = matriz[i][j]
+        end
+    end
+    puts maior
+end
